@@ -6,13 +6,9 @@ class Solution(object):
         :rtype: bool
         """
         s_2 = []
-        for i in [i for i in s]:
-            if i not in s_2:
-                s_2.append(i)
+        [s_2.append(n) for n in s if n not in s_2] 
         t_2 = []
-        for i in [i for i in t]:
-            if i not in t_2:
-                t_2.append(i)
+        [t_2.append(n) for n in t if n not in t_2] 
         if len(t_2) == len(s_2):
             d = {}
             for i in range(len(s_2)):
