@@ -4,14 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if sum(nums[1:]) == 0:
-            return 0
-        for i in range(1, len(nums)-1):
-            if sum(nums[:i]) == sum(nums[i+1:]):
+        left_sum = 0
+        nums_sum = sum(nums)
+        for i, num in enumerate(nums):
+            if left_sum == nums_sum - (left_sum + num):
                 return i
-
-        if sum(nums[:-1]) == 0:
-            return len(nums) - 1 
-        return -1
+            left_sum += num
+        else:
+            return -1
             
         
