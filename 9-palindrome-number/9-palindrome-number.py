@@ -4,6 +4,8 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        x = str(x) 
-        return  x == x[::-1]
+        if x < 0:
+            return False
+	
+        return str(x) == str(x)[::-1]
         
