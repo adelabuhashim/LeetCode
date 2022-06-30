@@ -8,9 +8,9 @@ class Solution(object):
         x = len(strs)
         
         for i in range(l,0,-1):
-            if sum([strs[0][:i] == s[:i] for s in strs]) == x:
-                print(strs[0])
-                return strs[0][:i]
+            ind = strs[0][:i]
+            if sum([ind == s[:i] for s in strs]) == x:
+                return ind
         return ""
             
             
