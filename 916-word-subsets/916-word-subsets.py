@@ -14,8 +14,8 @@ class Solution:
             for ch in d:
                 if c1[ch] < d[ch]: break
             else:
-                ans.append(word)                #  <-- else executes only if the for-loop
-                                                #      completes without break
+                ans.append(word)                
+                                                
 
         return ans                              
        
