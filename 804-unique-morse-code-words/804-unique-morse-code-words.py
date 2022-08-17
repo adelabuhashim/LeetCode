@@ -36,6 +36,7 @@ class Solution:
             word = ""
             for c in w:
                 word +=  converter[c]
-            res.append(word)
-        return len(set(res))
+            if word not in res:
+                res.append(word)
+        return len(res)
             
